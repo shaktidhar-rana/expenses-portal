@@ -32,15 +32,17 @@ PennyTrack is a lightweight personal expense tracker for people who want a clear
 	cd expenses-portal
 	```
 
-2. No package installation is required. The application has no build step or external runtime dependencies.
+2. No package installation is required. The application has no build step or external runtime dependencies. The included `package.json` provides a convenient start script.
 
 ## Run Locally
 
-Start a local static server from the project directory:
+Start the local static server from the project directory:
 
 ```powershell
-python -m http.server 4173
+npm start
 ```
+
+Alternatively, run `python -m http.server 4173` directly.
 
 Open [http://localhost:4173](http://localhost:4173) in a browser. You can also open `index.html` directly, although a local server is recommended for a browser-like environment.
 
