@@ -21,7 +21,7 @@ PennyTrack is a lightweight personal expense tracker for people who want a clear
 - CSS3 for responsive styling and visual design
 - Vanilla JavaScript for application state, navigation, forms, filtering, charts, and CSV handling
 - Browser `localStorage` for MVP data persistence
-- GitHub Actions and GitHub Pages for static deployment
+- Vercel for public static deployment
 
 ## Installation
 
@@ -52,9 +52,9 @@ The source code is available at [github.com/shakti786/expenses-portal](https://g
 
 ## Live Application URL
 
-The deployed application is available at [shakti786.github.io/expenses-portal](https://shakti786.github.io/expenses-portal/).
+The deployed application is available at [ghmcp.vercel.app](https://ghmcp.vercel.app/).
 
-GitHub Pages deployment runs automatically through GitHub Actions whenever changes are pushed to `master`.
+The Vercel production deployment serves the static application publicly. The source repository is [github.com/shakti786/expenses-portal](https://github.com/shakti786/expenses-portal).
 
 ## Project Status
 
