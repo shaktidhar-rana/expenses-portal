@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f6f1" />
+  <title>PennyTrack | Personal money, clearly seen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">$</span><span><small>private money log</small><strong>PennyTrack</strong></span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span>◌</span> Overview</button>
+        <button class="nav-item" data-view="transactions"><span>☷</span> Transactions</button>
+        <button class="nav-item" data-view="reports"><span>◔</span> Reports</button>
+        <button class="nav-item" data-view="categories"><span>⊞</span> Categories</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-budget"><div class="eyebrow">AUGUST GUARDRAIL</div><strong id="sideBudget">$520.41</strong><span>left to spend</span><div class="mini-progress"><i id="sideProgress"></i></div></div>
+        <button class="nav-item" data-view="settings"><span>⚙</span> Settings</button>
+        <div class="profile"><div class="avatar">JD</div><div><strong>Jamie Davis</strong><small>Personal account</small></div><button aria-label="Account menu">•••</button></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button><div class="breadcrumb">PennyTrack <span>/</span> <b id="pageLabel">Overview</b></div><div class="top-actions"><button class="ghost-button" id="exportTop">⇩ Export CSV</button><button class="primary-button" id="addTop">＋ Add expense</button></div></header>
+      <div id="app"></div>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close-button" id="closeModal" aria-label="Close">×</button><div class="eyebrow">NEW RECORD</div><h2 id="modalTitle">Add an expense</h2><form id="transactionForm"><div class="type-toggle"><label><input type="radio" name="type" value="expense" checked><span>Expense</span></label><label><input type="radio" name="type" value="income"><span>Income</span></label></div><div class="form-grid"><label>Amount<input name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required></label><label>Date<input name="date" type="date" required></label><label>Description<input name="description" placeholder="e.g. Weekly groceries" required></label><label>Category<select name="category" id="categorySelect"></select></label><label class="wide">Merchant / source<input name="merchant" placeholder="Optional"></label></div><div class="modal-actions"><button type="button" class="ghost-button" id="cancelModal">Cancel</button><button class="primary-button" type="submit">Save transaction</button></div></form></section></div>
+  <input type="file" id="csvInput" accept=".csv" hidden />
+  <script src="app.js"></script>
+</body>
+</html>
