@@ -12,6 +12,9 @@ PennyTrack is a lightweight personal expense tracker for people who want a clear
 - Category budget limits with progress indicators
 - Reports showing spending by category and spending over time
 - CSV import and export for moving data in and out of the app
+- Validation for transactions, categories, settings, and imported CSV rows
+- Safe handling of malformed browser data and CSV read failures
+- Saved currency, profile, and monthly budget preferences
 - Responsive layout for desktop and mobile browsers
 - Local browser persistence using `localStorage`
 
@@ -48,6 +51,12 @@ Open [http://localhost:4173](http://localhost:4173) in a browser. You can also o
 
 Transactions and categories are saved only in the current browser profile. Clearing browser storage will remove local MVP data.
 
+## Data and Privacy
+
+PennyTrack is a client-side MVP. Transactions, categories, and preferences stay in the browser's `localStorage`; there is no account, server-side database, or cross-device synchronization. Do not use it as the sole record for sensitive financial information.
+
+Imported CSV files should contain these columns in order: `Date`, `Description`, `Category`, `Merchant`, `Amount`, and `Type`. Invalid rows are skipped and valid rows are imported.
+
 ## GitHub Repository
 
 The source code is available at [github.com/shaktidhar-rana/expenses-portal](https://github.com/shaktidhar-rana/expenses-portal).
@@ -57,6 +66,8 @@ The source code is available at [github.com/shaktidhar-rana/expenses-portal](htt
 The deployed application is available at [mypennytrack.vercel.app](https://mypennytrack.vercel.app/).
 
 The Vercel production deployment serves the static application publicly. The source repository is [github.com/shaktidhar-rana/expenses-portal](https://github.com/shaktidhar-rana/expenses-portal).
+
+Deployments are connected from the GitHub `master` branch to Vercel. Each pushed change can be published at the live URL above.
 
 ## Project Status
 
