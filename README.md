@@ -28,7 +28,7 @@ PennyTrack is a lightweight personal expense tracker for people who want a clear
 1. Clone the repository:
 
 	```powershell
-	git clone https://github.com/shakti786/expenses-portal.git
+	git clone https://github.com/shaktidhar-rana/expenses-portal.git
 	cd expenses-portal
 	```
 
@@ -48,13 +48,13 @@ Transactions and categories are saved only in the current browser profile. Clear
 
 ## GitHub Repository
 
-The source code is available at [github.com/shakti786/expenses-portal](https://github.com/shakti786/expenses-portal).
+The source code is available at [github.com/shaktidhar-rana/expenses-portal](https://github.com/shaktidhar-rana/expenses-portal).
 
 ## Live Application URL
 
 The deployed application is available at [ghmcp.vercel.app](https://ghmcp.vercel.app/).
 
-The Vercel production deployment serves the static application publicly. The source repository is [github.com/shakti786/expenses-portal](https://github.com/shakti786/expenses-portal).
+The Vercel production deployment serves the static application publicly. The source repository is [github.com/shaktidhar-rana/expenses-portal](https://github.com/shaktidhar-rana/expenses-portal).
 
 ## Project Status
 
